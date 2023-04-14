@@ -1,0 +1,173 @@
+/*GENERAL STYLES*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*PRIMARY COLORS*/
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /*NEUTRAL COLOR*/
+    /*PARAGRAPHS*/
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    /*background, headings, buttons*/
+    --Very-Light-gray: hsl(0, 0%, 95%);
+
+    font-family: 'Big Shoulders Display', cursive; 
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: var(--Very-Light-gray);
+    font-size: 15px;
+}
+
+main {
+    height: 100%;
+}
+
+.attribution {
+    margin: 8px 0;
+}
+
+/*MOBILE STYLES*/
+@media (min-width: 375px) {
+.page_container {
+    padding: 10px;
+}
+.bodyworks_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+/*BODYWORK STYLES*/
+.bodywork {
+    max-width: 375px;
+    padding: 40px;
+    height: 475px;
+    color: white;
+}
+    /*BODYWORK CHILDS STYLES*/
+    .bodywork:first-child{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: var(--Bright-orange);
+    }
+    .bodywork:nth-child(2){
+        background-color: var(--Dark-cyan);
+    }
+    .bodywork:last-child{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: var(--Very-dark-cyan);
+    }
+/*BODYWORK TYPES STYLES*/
+.bodywork-type {
+    font-family: 'Big Shoulders Display';
+    font-weight: 700;
+    font-size: 3em;
+    text-transform: uppercase;
+    margin: 25px 0;
+    color: var(--Very-Light-gray);
+}
+/*BODYWORK DESCRIPTIONS STYLES*/
+.bodywork-description {
+    font-family: 'Lexend Deca';
+    font-weight: 400;
+    opacity: .75;
+    margin-bottom: 25px;
+    line-height: 25px;
+    font-size: 1.15em;
+    color: var(--Transparent-white);
+}
+/*BODYWORK BUTTONS STYLES*/
+.bodywork-learn-about {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-family: 'Lexend Deca';
+}
+    /*BUTTONS STYLES*/
+    .sedans {
+        color: var(--Bright-orange);
+        cursor: pointer;
+    }
+        .sedans:hover {
+            background-color: transparent;
+            color: var(--Very-Light-gray);
+            border: solid 1px white;
+            padding: 14.5px 24.5px;
+        }
+    .suvs {
+        color: var(--Dark-cyan);
+        cursor: pointer;
+    }
+        .suvs:hover {
+            background-color: transparent;
+            color: var(--Very-Light-gray);
+            border: solid 1px white;
+            padding: 14.5px 24.5px;
+        }
+    .luxury {
+        color: var(--Very-dark-cyan);
+        cursor: pointer;
+    }
+        .luxury:hover {
+            background-color: transparent;
+            color: var(--Very-Light-gray);
+            border: solid 1px white;
+            padding: 14.5px 24.5px;
+        }
+}
+
+/*DESTOP STYLE*/
+@media (min-width: 1024px) {
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    .page_container {
+        width: 1440px;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .bodyworks_container {
+        display: grid;
+        margin: 0 auto;
+        max-width: 1150px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+        .bodywork {
+            max-width: 480px;
+            max-height: 800px;
+        }
+        .bodywork:first-child{
+            border-radius: 0%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .bodywork:last-child{
+            border-radius: 0%;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+}
