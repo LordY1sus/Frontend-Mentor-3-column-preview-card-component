@@ -40,7 +40,7 @@ main {
 }
 
 /*MOBILE STYLES*/
-@media (min-width: 375px) {
+@media (min-width: 320px) {
 .page_container {
     padding: 10px;
 }
